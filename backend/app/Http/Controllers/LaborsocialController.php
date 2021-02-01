@@ -38,18 +38,7 @@ class LaborsocialController extends Controller
      */
     public function show(Laborsocial $laborsocial)
     {
-        // 
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Laborsocial  $laborsocial
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Laborsocial $laborsocial)
-    {
-        //
+        return response()->json(new PostResources($laborsocial)); 
     }
 
     /**
@@ -61,7 +50,8 @@ class LaborsocialController extends Controller
      */
     public function update(Request $request, Laborsocial $laborsocial)
     {
-        //
+        $laborsocial->update($request->all());
+        return response()->json(new PostResources($laborsocial));
     }
 
     /**
