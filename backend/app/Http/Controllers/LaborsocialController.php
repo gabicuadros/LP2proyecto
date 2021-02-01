@@ -70,6 +70,7 @@ class LaborsocialController extends Controller
      */
     public function destroy(Laborsocial $laborsocial)
     {
-        return Laborsocial::deleted($laborsocial);
+        $laborsocial->delete();
+        return response()->json(null,204);
     }
 }
