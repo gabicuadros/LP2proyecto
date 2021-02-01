@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Laborsocial;
 use Illuminate\Http\Request;
 
+use App\Http\Resources\Post as PostResources;
+
 class LaborsocialController extends Controller
 {
     /**
