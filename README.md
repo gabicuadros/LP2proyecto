@@ -1,3 +1,8 @@
-# LP2proyecto
+### LABOR SOCIAL
 
-## Aplicación Web donde se podrá registrar y visualizar las diversas labores sociales que esta dispuesta a realizar una persona. El proyecto esta desarrollado en php con la ayuda xampp por lo tanto para ejecutar este proyecto debe estar alojado dentro de la carpeta htdocs la misma que esta en la carpeta xampp por lo general ubicada en el Disco Local C
+## Aplicacion WEB para gestionar las labores sociales
+
+## Esta aplicación web está dividida en 2 partes:
+
+# - BACKEND: Desarrollo de la API que mantiene conexion a nuestra base de datos desarrollada en PHP con el framework LARAVEL
+# - FRONTEND: Desarrollo de la vistas en Ruby mediante el framework Ruby on Rails, estas tienen conexion con la API desarrollada en LARAVEL
