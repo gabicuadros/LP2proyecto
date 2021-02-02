@@ -1,0 +1,20 @@
+<h1>LABOR SOCIAL</h1>
+<table border>
+    <thead>
+        <tr>
+            <th>Nombres</th>
+            <th>Categoria</th>
+            <th>Perfil</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @datos.each do |dato| %>
+            <tr>
+                <td><%= dato["nombres"] %></td>
+                <td><%= dato["categoria"] %></td>
+                <td><%= dato["perfil"] %></td>
+            </tr>
+        <% end %>
+    </tbody>
+
+</table>
