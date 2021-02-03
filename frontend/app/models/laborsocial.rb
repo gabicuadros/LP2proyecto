@@ -1,0 +1,2 @@
+class Laborsocial < ApplicationRecord
+end

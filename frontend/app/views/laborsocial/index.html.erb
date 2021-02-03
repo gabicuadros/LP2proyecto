@@ -1,10 +1,14 @@
+<!DOCTYPE html>
+<p id="notice"><%= notice %></p>
 <h1>LABOR SOCIAL</h1>
-<table border>
+<table border CELLPADDING=10 CELLSPACING=0>
+    <%=link_to 'Crear Labor Social', new_laborsocial_path %>
     <thead>
         <tr>
             <th>Nombres</th>
             <th>Categoria</th>
             <th>Perfil</th>
+            <th colspan="3">Opciones</th>
         </tr>
     </thead>
     <tbody>
@@ -13,8 +17,10 @@
                 <td><%= dato["nombres"] %></td>
                 <td><%= dato["categoria"] %></td>
                 <td><%= dato["perfil"] %></td>
+                <td><%= link_to "Show", laborsocial_path(dato["id"]) %></td>
+                <td><%= link_to "delete" %></td>
+                <td><%= link_to "update" %></td>
             </tr>
         <% end %>
-    </tbody>
-
+    </tbody> 
 </table>

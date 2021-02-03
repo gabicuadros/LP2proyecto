@@ -1,0 +1,26 @@
+<h1>Informacion completa de la labor social</h1>
+
+<p>
+    <strong>Nombres: </strong>
+    <%= @datos["nombres"] %><br>
+
+    <strong>Categoria: </strong>
+    <%= @datos["categoria"] %><br>
+
+    <strong>Fecha Inicial: </strong>
+    <%= @datos["finicial"] %><br>
+
+    <strong>Fecha Final: </strong>
+    <%= @datos["ffinal"] %><br>
+
+    <strong>Descripcion: </strong>
+    <%= @datos["descripcion"] %><br>
+
+    <strong>Competencias: </strong>
+    <%= @datos["competencias"] %><br>
+
+    <strong>Oferta: </strong>
+    <%= @datos["oferta"] %><br>
+</p>
+
+<%= link_to 'Back', laborsocial_index_path %> 

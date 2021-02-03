@@ -1,0 +1,43 @@
+<h1>Registro de Laborsocial</h1>
+
+<%= form_with(url: "http://localhost:8000/api/laborsocial", method: "post", local: false) do |f| %>
+    <div>
+        <%= f.label :nombres %>
+        <%= f.text_field :nombres %>
+    </div>
+    <div>
+        <%= f.label :categoria %>
+        <%= f.text_field :categoria %>
+    </div>
+    <div>
+        <%= f.label :finicial %>
+        <%= f.date_field :finicial %>
+    </div>
+    <div>
+        <%= f.label :ffinal %>
+        <%= f.date_field :ffinal %>
+    </div>
+    <div>
+        <%= f.label :perfil %>
+        <%= f.text_field :perfil %>
+    </div>
+    <div>
+        <%= f.label :descripcion %>
+        <%= f.text_field :descripcion %>
+    </div>
+    <div>
+        <%= f.label :competencias %>
+        <%= f.text_field :competencias %>
+    </div>
+    <div>
+        <%= f.label :oferta %>
+        <%= f.text_field :oferta %>
+    </div>
+
+    <div>
+        <%= f.submit %>
+    </div>
+<% end %>
+<%= link_to 'Back', laborsocial_index_path %>
+
+
