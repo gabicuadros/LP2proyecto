@@ -1,8 +1,46 @@
 <!DOCTYPE html>
+<head>
+    <style>
+        a{
+            font-size: 25px;
+            font-style: italic;
+        }
+        h1{
+            text-align: center;
+        }
+
+        table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+        border: 3px solid purple;
+        }
+
+        thead th:nth-child(1) {
+        width: 20%;
+        }
+
+        thead th:nth-child(2) {
+        width: 10%;
+        }
+
+        thead th:nth-child(3) {
+        width: 35%;
+        }
+
+        thead th:nth-child(4) {
+        width: 20%;
+        }
+
+        th, td {
+        padding: 20px;
+        }
+    </style>
+</head>
 <p id="notice"><%= notice %></p>
 <h1>LABOR SOCIAL</h1>
 <table border CELLPADDING=10 CELLSPACING=0>
-    <%=link_to 'Crear Labor Social', new_laborsocial_path %>
+    <button><%=link_to 'Crear Labor Social', new_laborsocial_path %></button>
     <thead>
         <tr>
             <th>Nombres</th>
@@ -18,8 +56,8 @@
                 <td><%= dato["categoria"] %></td>
                 <td><%= dato["perfil"] %></td>
                 <td><%= link_to "Show", laborsocial_path(dato["id"]) %></td>
-                <td><%= link_to "delete" %></td>
-                <td><%= link_to "update" %></td>
+                <td><%= link_to "Delete", delete_path(dato["id"])%></td>
+                <td><%= link_to "Update", edit_laborsocial_path(dato["id"]) %></td>
             </tr>
         <% end %>
     </tbody> 

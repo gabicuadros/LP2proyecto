@@ -1,8 +1,17 @@
-<h1>Informacion completa de la labor social</h1>
-
+<h1>Informacion completa de <%= @datos["nombres"] %></h1>
+<head>
+    <style>
+        strong,a{
+            font-size: 25px;
+        }
+        strong{
+            padding-right: 10px;
+        }
+    </style>
+</head>
 <p>
     <strong>Nombres: </strong>
-    <%= @datos["nombres"] %><br>
+    <a><%= @datos["nombres"] %><a><br>
 
     <strong>Categoria: </strong>
     <%= @datos["categoria"] %><br>
@@ -12,6 +21,9 @@
 
     <strong>Fecha Final: </strong>
     <%= @datos["ffinal"] %><br>
+
+    <strong>Perfil: </strong>
+    <%= @datos["perfil"] %><br>
 
     <strong>Descripcion: </strong>
     <%= @datos["descripcion"] %><br>

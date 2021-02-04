@@ -20,6 +20,7 @@ class Post extends JsonResource
             'categoria'    => $this->categoria,
             'finicial'     => $this->finicial,
             'ffinal'       => $this->ffinal,
+            'perfil'       => $this->perfil,
             'descripcion'  => $this->descripcion,
             'competencias' => $this->competencias,
             'oferta'       => $this->oferta,

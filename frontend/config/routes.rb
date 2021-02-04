@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'delete/show/:id', to:'delete#show', as: 'delete'
   resources :laborsocial
   
 

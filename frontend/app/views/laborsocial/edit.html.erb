@@ -1,4 +1,4 @@
-<h1>Registro de Laborsocial</h1>
+<!DOCTYPE html>
 <head>
     <style>
         h1{
@@ -59,50 +59,51 @@
         }
     </style>
 </head>
-<%= form_with(url: "http://localhost:8000/api/laborsocial", method: "post", local: false) do |f| %>
+<h1>Editar labor social</h1>
+<%= form_with(url: "http://localhost:8000/api/laborsocial/" + params.require(:id), method: "put", local: false) do |f| %>
     <div>
         <%= f.label :nombres %>
-        <%= f.text_field :nombres %>
+        <%= f.text_field :nombres, :value => @datos["nombres"] %>
     </div>
     <div>
         <%= f.label :categoria %>
-        <%= f.text_field :categoria %>
+        <%= f.text_field :categoria, :value => @datos["categoria"] %>
     </div>
     <div>
-        <%= f.label :finicial, "Fecha Inicial" %>
-        <%= f.date_field :finicial %>
+        <%= f.label :finicial, "Fecha Inicial " %>
+        <%= f.date_field :finicial, :value => @datos["finicial"] %>
     </div>
     <div>
-        <%= f.label :ffinal, "Fecha Final" %>
-        <%= f.date_field :ffinal %>
+        <%= f.label :ffinal, "Fecha Final " %>
+        <%= f.date_field :ffinal, :value => @datos["ffinal"] %>
     </div>
     <div>
         <%= f.label :perfil %>
-        <%= f.text_field :perfil %>
+        <%= f.text_field :perfil, :value => @datos["perfil"] %>
     </div>
     <div>
         <%= f.label :descripcion %>
-        <%= f.text_field :descripcion %>
+        <%= f.text_field :descripcion, :value => @datos["descripcion"] %>
     </div>
     <div>
         <%= f.label :competencias %>
-        <%= f.text_field :competencias %>
+        <%= f.text_field :competencias, :value => @datos["competencias"] %>
     </div>
     <div>
         <%= f.label :oferta %>
-        <%= f.text_field :oferta %>
+        <%= f.text_field :oferta, :value => @datos["oferta"] %>
     </div>
 
     <div>
-        <%= f.submit :onclick => "regresar();" %>
+        <%= f.submit :submit, :onclick => "regresar();" %>
     </div>
 
     <script type="text/javascript">
         function regresar() {
             location.href = "http://localhost:3000";
+            console.log("Hola mundo");
         };
     </script>
+
 <% end %>
 <%= link_to 'Back', laborsocial_index_path %>
-
-

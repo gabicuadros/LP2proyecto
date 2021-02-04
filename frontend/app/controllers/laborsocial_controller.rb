@@ -14,16 +14,16 @@ class LaborsocialController < ApplicationController
         
     end
 
-    def destroy
-        HTTParty.delete "http://localhost:8000/api/laborsocial/" + params.require(:id)
-    end
-
     def create
         
     end
 
-    private    
-        def laborsocial_params
-            params.require(:dato).permit(:nombres, :categoria, :finicial, :ffinal, :perfil, :descripcion, :competencias, :oferta)
-        end
+    def edit
+        @datos = HTTParty.get "http://localhost:8000/api/laborsocial/" + params.require(:id)
+    end
+
+    def redirect_cancel
+        redirect_to laborsocial_index_path if params[:cancel]
+    end
+
 end
